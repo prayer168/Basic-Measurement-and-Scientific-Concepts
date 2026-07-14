@@ -42,4 +42,13 @@
 ## 限制與備註
 
 - Browser pane 於測試期間為背景分頁（document.hidden=true），無法擷取畫面截圖；改以 DOM 幾何（getBoundingClientRect）、computed style（animationName）與互動流程腳本驗證。rAF 動畫在背景分頁會暫停，屬瀏覽器標準節流行為，前景使用不受影響。
-- 部署後於公開網址複測關鍵互動（見部署段落更新）。
+- 部署後於公開網址複測關鍵互動（見下方部署驗證）。
+
+## 部署驗證（2026-07-14）
+
+- Repo：https://github.com/prayer168/Basic-Measurement-and-Scientific-Concepts
+- GitHub Pages：https://prayer168.github.io/Basic-Measurement-and-Scientific-Concepts/ （HTTP 200）
+- 7 個 HTML、CSS、JS、og-cover.png 全部 200
+- 首頁原始碼含 `og:image` 絕對網址 ✅
+- 公開版複測：闖關 10 題完整作答 10/10 ✅、密度實驗室記錄數據點 ✅、主控台錯誤 0 ✅
+- 提醒：若網址曾在 Facebook 分享過，請至 https://developers.facebook.com/tools/debug/ 按「再次抓取」更新縮圖快取。
