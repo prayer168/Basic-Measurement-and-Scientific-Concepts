@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.0.1 — 2026-07-14
+
+- 新增 `share/facebook-post.html`：中英雙語 Facebook 宣傳文案一鍵複製頁（含 og meta）
+
 ## v1.0.0 — 2026-07-14
 
 - 初版發布：七頁多頁式互動教材
