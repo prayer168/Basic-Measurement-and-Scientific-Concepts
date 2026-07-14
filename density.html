@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>密度與圖表判讀｜基本測量與科學概念</title>
+<meta name="description" content="透過互動實驗認識密度＝質量÷體積，學會判讀質量－體積關係圖，並預測物體在水中的浮沉。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="基本測量與科學概念｜互動數位教材">
+<meta property="og:title" content="密度與圖表判讀">
+<meta property="og:description" content="自己動手做密度實驗、畫 M-V 圖，發現物質的身分證！">
+<meta property="og:url" content="https://prayer168.github.io/Basic-Measurement-and-Scientific-Concepts/density.html">
+<meta property="og:image" content="https://prayer168.github.io/Basic-Measurement-and-Scientific-Concepts/assets/images/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prayer168.github.io/Basic-Measurement-and-Scientific-Concepts/assets/images/og-cover.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animation.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="density">
+<main id="main">
+
+  <section class="card">
+    <h2>⚖️ 密度：物質的「身分證」</h2>
+    <p class="lede">一大塊鐵和一小塊鐵，質量不同、體積不同，但「每 1 立方公分有多少公克」永遠一樣！這個數值就是<span class="keyword">密度</span>——它是物質的<strong>特性</strong>，不會因為東西變大變小而改變。</p>
+    <div class="hint" style="text-align:center;font-size:1.15rem;">
+      密度 D ＝ 質量 M ÷ 體積 V　　常用單位：<strong>g/cm³</strong>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <caption>常見物質的密度（約值，常溫常壓）</caption>
+        <thead><tr><th>物質</th><th>密度 (g/cm³)</th><th>物質</th><th>密度 (g/cm³)</th></tr></thead>
+        <tbody>
+          <tr><td>松木</td><td>約 0.5</td><td>鋁</td><td>2.70</td></tr>
+          <tr><td>酒精</td><td>0.79</td><td>鐵</td><td>7.87</td></tr>
+          <tr><td>冰（0 °C）</td><td>0.92</td><td>銅</td><td>8.96</td></tr>
+          <tr><td>純水（4 °C）</td><td>1.00</td><td>金</td><td>19.3</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🔬 互動①：密度實驗室——自己做實驗、自己畫圖！</h2>
+    <p><strong>任務：</strong>選一種物質，調整體積、記下質量，把數據點記錄到右邊的 M–V 圖上。<br>試試看：<em>同一種物質記錄 3 個不同體積的點，它們會排成什麼形狀？換一種物質再做一次！</em></p>
+    <div class="duo">
+      <div>
+        <div class="btn-row" id="matButtons" role="group" aria-label="選擇實驗物質"></div>
+        <div class="svg-stage">
+          <svg id="blockSvg" viewBox="0 0 300 190" role="img" aria-label="實驗物質方塊，大小隨體積改變，旁邊顯示電子秤讀數"></svg>
+        </div>
+        <div class="slider-row">
+          <label for="volSlider">體積 V</label>
+          <input type="range" id="volSlider" min="10" max="80" step="5" value="30" aria-describedby="volReadout">
+          <span class="readout" id="volReadout">30 cm³</span>
+        </div>
+        <p>電子秤讀數：<span class="readout" id="massReadout">— g</span>　密度 M÷V＝<span class="readout" id="densReadout">—</span></p>
+        <div class="btn-row">
+          <button class="btn" id="plotBtn" type="button">📍 記錄到圖上</button>
+          <button class="btn secondary" id="clearPlotBtn" type="button">🗑️ 清空圖表</button>
+        </div>
+      </div>
+      <div>
+        <div class="svg-stage">
+          <svg id="chartSvg" viewBox="0 0 460 350" role="img" aria-label="質量對體積關係圖，記錄的數據點會顯示在圖上"></svg>
+        </div>
+        <div id="labFeedback" class="feedback neutral show" aria-live="polite">選物質、調體積，按「記錄到圖上」開始收集數據！</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>📈 互動②：圖表判讀——斜率就是密度！</h2>
+    <p>三位同學分別測量甲、乙、丙三種物質，把數據畫成 M–V 圖。<strong>點選圖中的直線</strong>，看看每條線代表的密度。</p>
+    <div class="duo">
+      <div class="svg-stage">
+        <svg id="readChartSvg" viewBox="0 0 460 350" aria-label="甲乙丙三種物質的質量對體積關係圖，可點選直線查看密度" role="img"></svg>
+      </div>
+      <div>
+        <div id="lineInfo" class="feedback neutral show" aria-live="polite">👆 點選一條直線試試！（也可以用 Tab 鍵選取後按 Enter）</div>
+        <h3>想一想</h3>
+        <p>哪一種物質的密度最大？</p>
+        <div id="slopeOptions">
+          <button class="option-btn" data-ans="甲" type="button">甲（最陡的線）</button>
+          <button class="option-btn" data-ans="乙" type="button">乙（中間的線）</button>
+          <button class="option-btn" data-ans="丙" type="button">丙（最平緩的線）</button>
+        </div>
+        <div id="slopeFeedback" class="feedback" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🌊 互動③：浮沉預測站</h2>
+    <p>物體的密度比水（1.00 g/cm³）<strong>小</strong>會浮、比水<strong>大</strong>會沉。先<span class="keyword">預測</span>，再放進水裡<span class="keyword">驗證</span>！</p>
+    <div class="duo">
+      <div>
+        <div class="btn-row" id="floatMatButtons" role="group" aria-label="選擇要放入水中的物體"></div>
+        <p id="floatPrompt">選好物體後，先預測它會浮還是沉：</p>
+        <div class="btn-row" role="group" aria-label="預測浮沉">
+          <button class="btn secondary" id="predictFloatBtn" type="button">🎈 我猜會浮</button>
+          <button class="btn secondary" id="predictSinkBtn" type="button">⬇️ 我猜會沉</button>
+        </div>
+        <div id="floatFeedback" class="feedback" role="status" aria-live="polite"></div>
+        <div class="btn-row">
+          <button class="btn secondary" id="floatResetBtn" type="button">↺ 重來一次</button>
+        </div>
+      </div>
+      <div class="svg-stage">
+        <svg id="floatSvg" viewBox="0 0 340 300" role="img" aria-label="浮沉實驗水槽動畫：物體放入水中後依密度浮起或下沉"></svg>
+      </div>
+    </div>
+    <div class="hint">🧊 你發現了嗎？冰的密度（0.92）只比水小一點點，所以冰塊約有 <strong>92%</strong> 的體積沉在水面下——這就是「冰山一角」的由來！</div>
+  </section>
+
+</main>
+<script src="js/chrome.js"></script>
+<script src="js/density.js"></script>
+</body>
+</html>

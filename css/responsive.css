@@ -1,0 +1,21 @@
+/* 響應式版面 */
+
+@media (max-width: 900px) {
+  .duo { grid-template-columns: 1fr; }
+  .unit-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .site-header h1 { font-size: 1.25rem; }
+  .card { padding: 16px 16px; }
+  .apply-grid { grid-template-columns: 1fr; }
+  .unit-grid { grid-template-columns: 1fr; }
+  .target-grid { grid-template-columns: 1fr; }
+  .pager { flex-direction: column; }
+  .pager a { text-align: center; }
+  .stage-flow { gap: 4px; }
+  .stage-flow .stage-step { padding: 6px 10px; font-size: 0.86rem; }
+  .btn { width: 100%; text-align: center; }
+  .btn-row .btn { width: auto; flex: 1 1 auto; }
+}

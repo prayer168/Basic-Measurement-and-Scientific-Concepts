@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>基本測量：長度、質量、時間與體積｜基本測量與科學概念</title>
+<meta name="description" content="學習長度、質量、時間與體積的國際單位與測量方法：直尺估計值、量筒凹液面讀數、排水法、上皿天平操作步驟。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="基本測量與科學概念｜互動數位教材">
+<meta property="og:title" content="基本測量：長度、質量、時間與體積">
+<meta property="og:description" content="直尺怎麼讀？量筒怎麼看？天平怎麼用？互動練習一次搞懂！">
+<meta property="og:url" content="https://prayer168.github.io/Basic-Measurement-and-Scientific-Concepts/measure.html">
+<meta property="og:image" content="https://prayer168.github.io/Basic-Measurement-and-Scientific-Concepts/assets/images/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prayer168.github.io/Basic-Measurement-and-Scientific-Concepts/assets/images/og-cover.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animation.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="measure">
+<main id="main">
+
+  <section class="card">
+    <h2>📏 為什麼要測量？</h2>
+    <p class="lede">「這條繩子大概三個手掌長」——每個人的手掌不一樣大，這樣的描述沒辦法溝通！科學上使用<span class="keyword">國際單位制（SI）</span>，讓全世界的測量結果都能互相比較。</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <caption>常用物理量與國際單位</caption>
+        <thead><tr><th>物理量</th><th>國際單位</th><th>符號</th><th>常用測量工具</th></tr></thead>
+        <tbody>
+          <tr><td>長度</td><td>公尺</td><td>m</td><td>直尺、捲尺</td></tr>
+          <tr><td>質量</td><td>公斤</td><td>kg</td><td>上皿天平、電子天平</td></tr>
+          <tr><td>時間</td><td>秒</td><td>s</td><td>碼錶、時鐘</td></tr>
+          <tr><td>體積</td><td>立方公尺（導出單位）</td><td>m³</td><td>量筒、量杯</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="hint">🔁 <strong>常用換算：</strong>1 m = 100 cm = 1000 mm｜1 kg = 1000 g｜1 L = 1000 mL｜<strong>1 mL = 1 cm³</strong>（這個等式在「排水法」會非常好用！）</div>
+  </section>
+
+  <section class="card">
+    <h2>🖊️ 互動①：直尺讀數練習——別忘了「估計值」！</h2>
+    <p>直尺的最小刻度是 <strong>0.1 cm（1 mm）</strong>。科學測量時，要記錄到<span class="keyword">最小刻度的下一位</span>：最後一位是用眼睛估計的<span class="keyword">估計值</span>。</p>
+    <div class="duo">
+      <div class="svg-stage">
+        <svg id="rulerSvg" viewBox="0 0 660 170" role="img" aria-label="直尺測量鉛筆長度的互動圖，鉛筆末端落在兩刻度之間"></svg>
+      </div>
+      <div>
+        <p><strong>任務：</strong>下圖鉛筆的左端對齊 0 刻度，請讀出鉛筆的長度。哪一個紀錄才正確？</p>
+        <div id="rulerOptions"></div>
+        <div id="rulerFeedback" class="feedback" role="status" aria-live="polite"></div>
+        <div class="btn-row">
+          <button class="btn" id="rulerNextBtn" type="button">🔄 換一題</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🧪 互動②：量筒讀數與排水法</h2>
+    <p>量筒裡的水面因為附著力呈現<span class="keyword">凹液面</span>。讀數時，視線必須與<strong>凹液面最低處</strong>保持水平！</p>
+    <div class="duo">
+      <div>
+        <h3>👁️ 視線位置對了嗎？</h3>
+        <div class="svg-stage">
+          <svg id="cylViewSvg" viewBox="0 0 340 300" role="img" aria-label="量筒視線角度互動圖：俯視、平視、仰視三種視線與對應讀數"></svg>
+        </div>
+        <div class="btn-row" role="group" aria-label="選擇視線角度">
+          <button class="btn secondary" data-view="down" type="button">😯 俯視（由上往下看）</button>
+          <button class="btn secondary" data-view="level" type="button">😊 平視</button>
+          <button class="btn secondary" data-view="up" type="button">🙄 仰視（由下往上看）</button>
+        </div>
+        <div id="cylViewFeedback" class="feedback" role="status" aria-live="polite"></div>
+      </div>
+      <div>
+        <h3>🪨 排水法：量出不規則石塊的體積</h3>
+        <div class="svg-stage">
+          <svg id="dispSvg" viewBox="0 0 340 300" role="img" aria-label="排水法動畫：石塊放入量筒後水位由32毫升上升到46毫升"></svg>
+        </div>
+        <div class="btn-row">
+          <button class="btn" id="dropStoneBtn" type="button">⬇️ 放入石塊</button>
+          <button class="btn secondary" id="resetStoneBtn" type="button">↺ 重設</button>
+        </div>
+        <div id="dispFeedback" class="feedback neutral show" role="status" aria-live="polite">目前水位 V₁ = 32 mL。按「放入石塊」觀察水位變化。</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>⚖️ 動畫：上皿天平的正確使用步驟</h2>
+    <p>天平測的是<span class="keyword">質量</span>。跟著四個步驟操作，注意每一步天平的變化！</p>
+    <div class="duo">
+      <div class="svg-stage">
+        <svg id="balanceSvg" viewBox="0 0 480 300" role="img" aria-label="上皿天平操作動畫：歸零、放待測物、加砝碼、平衡讀數四階段"></svg>
+      </div>
+      <div>
+        <div class="stage-flow" id="balanceFlow" role="group" aria-label="天平操作步驟"></div>
+        <div class="stage-caption" id="balanceCaption" aria-live="polite"></div>
+        <div class="btn-row">
+          <button class="btn secondary" id="balancePrevBtn" type="button">← 上一步</button>
+          <button class="btn" id="balanceNextBtn" type="button">下一步 →</button>
+        </div>
+        <div class="hint warn">⚠️ 砝碼要用<strong>鑷子</strong>夾取（手汗會讓砝碼生鏽變重），並由<strong>大到小</strong>依序嘗試。</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>⏱️ 時間測量：規律的往復運動</h2>
+    <div class="duo">
+      <div class="svg-stage">
+        <svg viewBox="0 0 300 220" role="img" aria-label="單擺擺動動畫：擺錘左右規律擺動">
+          <rect x="90" y="18" width="120" height="10" fill="#78350f"/>
+          <g transform="translate(150, 28)">
+            <g class="pendulum-arm">
+              <line x1="0" y1="0" x2="0" y2="130" stroke="#334155" stroke-width="3"/>
+              <circle cx="0" cy="142" r="18" fill="#f59e0b" stroke="#b45309" stroke-width="2.5"/>
+            </g>
+          </g>
+          <path d="M95 185 a70 70 0 0 1 110 0" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 5"/>
+          <text x="150" y="212" font-size="13" fill="#4a6076" text-anchor="middle">來回一次 = 一個週期</text>
+        </svg>
+      </div>
+      <div>
+        <p>像單擺這種<span class="keyword">規律重複</span>的運動，很適合用來計時。擺錘「來回擺動一次」所需的時間稱為<span class="keyword">週期</span>。</p>
+        <p>💡 <strong>聰明測量法：</strong>週期太短、不好按碼錶怎麼辦？<br>測量「來回 20 次」的總時間，再除以 20！例如 20 次共 36.0 秒，週期 = 36.0 ÷ 20 = <strong>1.80 秒</strong>。這樣可以讓按錶時間差造成的影響變小（下一單元會再談誤差）。</p>
+        <div class="hint">🕰️ 古代的水鐘、日晷，到現代的石英錶、原子鐘，都是利用「規律變化」來計時的喔！</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<script src="js/chrome.js"></script>
+<script src="js/measure.js"></script>
+</body>
+</html>
